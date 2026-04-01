@@ -1,6 +1,6 @@
 {
   "name": "jarvis-ci",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This npm package is light weight CI/CD tool. the goal is to achieve simplicity and local machine CI/CD execution. it is configured through YAML for commands.",
   "main": "./dist/index.js",
   "type": "module",
