@@ -61,7 +61,6 @@ export class JarvisCLI {
             return;
         }
         switch (subcommand) {
-            case 'add':
             case 'edit':
                 this.PipelineCommand.editPipeline(pipelineName);
                 break;
@@ -83,6 +82,8 @@ Jarvis CLI
 Commands:
   jarvis config add         Add repository configuration
   jarvis config port        Set webhook server port
+  jarvis config local       Set webhook server to listen on localhost(yes) or public ip enabled server (no)
+  jarvis config proxy       Set webhook server to listen on interfaces (proxy mode) from smee.io
   jarvis start              Start webhook server
   jarvis pipeline list      List all pipelines
   jarvis pipeline delete <pipelineName>   Delete a pipeline configuration
