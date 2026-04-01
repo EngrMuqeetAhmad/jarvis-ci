@@ -11,6 +11,13 @@
   "exports": {
     ".": "./dist/cli.js"
   },
+  "files": [
+    "dist",
+    "tmp",
+    "pipelines",
+    "configs",
+    "LICENSE"
+  ],
   "scripts": {
     "dev": "tsx src/bin/cli.ts",
     "start": "node dist/bin/cli.js",
@@ -41,6 +48,7 @@
   },
   "devDependencies": {
     "@types/node": "^25.5.0",
+    "esbuild": "^0.27.4",
     "typescript": "^6.0.2"
   }
 }

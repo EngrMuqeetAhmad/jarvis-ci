@@ -16,7 +16,7 @@ export class Server {
         this.configCommand = new ConfigCommand();
         this.pipelineCommand = new PipelineCommand();
         this.webhooks = new Webhooks({
-            secret: "my-very-big-secret",
+            secret: this.configManager.getConfig().server.secret || '',
         });
         if (this.configManager.getConfig().server.local && this.configManager.getConfig().server.proxy !== "") {
             this.smee = new SmeeClient({

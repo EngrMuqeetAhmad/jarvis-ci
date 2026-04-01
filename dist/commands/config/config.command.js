@@ -28,12 +28,12 @@ export class ConfigCommand {
             name: pipelineName,
             repo: githubRepoURL,
             branch: branchName,
-            secret: webhookSecret,
             yamlPath: pipelineFilePath,
             tempDir: tempDirPath
         };
         const configFile = fs.readFileSync(this.CONFIG_PATH);
         let configArray = JSON.parse(configFile.toString());
+        configArray.server.secret = webhookSecret;
         configArray.server.local = local;
         if (local) {
             configArray.server.proxy = proxyURL;

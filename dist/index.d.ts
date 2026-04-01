@@ -2,13 +2,13 @@ type ServerConfig = {
     local: boolean;
     port: number;
     proxy?: string;
+    secret: string
 }
 
 export type RepoConfig = {
     name: string;
     repo: string;
     branch: string;
-    secret: string;
     yamlPath: string;
     tempDir: string;
 }
