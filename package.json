@@ -1,0 +1,46 @@
+{
+  "name": "jarvis-ci",
+  "version": "1.0.0",
+  "description": "This npm package is light weight CI/CD tool. the goal is to achieve simplicity and local machine CI/CD execution. it is configured through YAML for commands.",
+  "main": "./dist/index.js",
+  "type": "module",
+  "bin": {
+    "jarvis": "./dist/bin/cli.js"
+  },
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/cli.js"
+  },
+  "scripts": {
+    "dev": "tsx src/bin/cli.ts",
+    "start": "node dist/bin/cli.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EngrMuqeetAhmad/jarvis-ci.git"
+  },
+  "keywords": [
+    "devops",
+    "ci/cd",
+    "automation"
+  ],
+  "author": "Engr. Muqeet Ahmad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EngrMuqeetAhmad/jarvis-ci/issues"
+  },
+  "homepage": "https://github.com/EngrMuqeetAhmad/jarvis-ci#readme",
+  "dependencies": {
+    "@octokit/webhooks": "^14.2.0",
+    "execa": "^9.6.1",
+    "inquirer": "^13.3.2",
+    "listr2": "^10.2.1",
+    "smee-client": "^5.0.0",
+    "yaml": "^2.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^6.0.2"
+  }
+}
